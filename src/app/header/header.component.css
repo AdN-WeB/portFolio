@@ -46,8 +46,6 @@
   color: white;
   border: 1px solid white ;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  width: 98vw;
-  height: 15vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

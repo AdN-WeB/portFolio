@@ -1,0 +1,32 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  gap: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: white;
+  width: 98vw;
+  border: 1px white solid;
+}
+.main a {
+    color : red
+}
+.know {
+  border: 3px solid rgb(255, 255, 255);
+  padding: 5px;
+  width: 32%;
+  color: white;
+  background-color: black;
+}
+.project {
+  border: 3px solid rgb(0, 0, 0);
+  padding: 5px;
+  width: 32%;
+}
+.ambition {
+  border: 3px solid rgb(255, 255, 255);
+  padding: 5px;
+  width: 32%;
+  color: white;
+  background-color: black;
+}

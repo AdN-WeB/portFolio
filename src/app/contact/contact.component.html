@@ -1,0 +1,116 @@
+<div class="form">
+  <form
+    (ngSubmit)="myForm.valid && onSubmit() && clear()"
+    [formGroup]="userForm"
+    #myForm="ngForm"
+  >
+    <div class="form-group">
+      <label for="name"> </label>
+      <input
+        type="text"
+        formControlName="userName"
+        class="form-control"
+        name=""
+        id="name"
+        placeholder="Name"
+        required
+      />
+
+      <div
+        *ngIf="myForm.submitted && userForm.controls.userName.errors?.required"
+      >
+        <p class="danger">Merci de renseigner votre nom</p>
+      </div>
+      <div
+        *ngIf="myForm.submitted && userForm.controls.userName.errors?.minLength"
+      >
+        <p class="danger">3 charactères minimum</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="userEmail"> </label>
+      <input
+        type="email"
+        formControlName="userEmail"
+        class="form-control"
+        name=""
+        id="userEmail"
+        placeholder="@"
+        required
+      />
+      <span class="petitMsg"> Nous ne partagerons pas votre adresse email</span>
+      <div
+        *ngIf="myForm.submitted && userForm.controls.userEmail.errors?.required"
+      >
+        <p class="danger">Merci de renseigner votre email</p>
+      </div>
+    </div>
+    <div *ngIf="myForm.submitted && userForm.controls.userEmail.errors?.email">
+      <p class="danger">Le format de l'adresse email n'est pas valide</p>
+    </div>
+    <div
+      *ngIf="myForm.submitted && userForm.controls.userEmail.errors?.minlength"
+    >
+      <p class="danger">3 charactères minimum</p>
+    </div>
+    <div class="form-group">
+      <label for="userTel"></label>
+      <input
+        type="text"
+        formControlName="userTel"
+        class="form-control"
+        name=""
+        id="userTel"
+        placeholder="+33"
+        required
+      />
+      <span class="petitMsg">Ni votre numéro de téléphone</span>
+      <div
+        *ngIf="myForm.submitted && userForm.controls.userTel.errors?.required"
+      >
+        <p class="danger">Merci de renseigner votre numero de téléphone</p>
+      </div>
+      <div
+        *ngIf="myForm.submitted && userForm.controls.userTel.errors?.pattern"
+      >
+        <p class="danger">
+          Le format n'est pas valide ex: 0600000000 or +336000000000
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="userMsg"></label>
+      <textarea
+        type="text"
+        formControlName="userMsg"
+        class="form-control"
+        name=""
+        id="userMsg"
+        placeholder="Entrez votre message"
+        rows="6"
+        required
+      ></textarea>
+      <div
+        *ngIf="myForm.submitted && userForm.controls.userMsg.errors?.maxlength"
+      >
+        <p class="danger">400 charactères maximum</p>
+      </div>
+      <div
+        *ngIf="myForm.submitted && userForm.controls.userMsg.errors?.minlength"
+      >
+        <p class="danger">5 charactères minimum</p>
+      </div>
+      <div
+        *ngIf="myForm.submitted && userForm.controls.userMsg.errors?.required"
+      >
+        <p class="danger">Pas de message, pas de reponse</p>
+      </div>
+    </div>
+    <div class="btnEdit">
+      <button type="submit">Envoyer</button>
+      <button type="reset" (click)='clear()'>Effacer</button>
+      <button type="button" (click)="redirected()">Retour</button>
+    </div>
+  </form>
+</div>

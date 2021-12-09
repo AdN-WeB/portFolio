@@ -1,0 +1,61 @@
+.danger {
+  color: red;
+  display: flex;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.petitMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+
+}
+input {
+  width: 700px;
+  height: 30px;
+  margin: 20px;
+  
+}
+textarea {
+  width: 700px;
+  margin: 20px;
+ 
+}
+.btnEdit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+.btnEdit button {
+  width: 150px;
+  height: 50px;
+  background: linear-gradient(0.25turn, #000000, #ffffff);
+  border: 2px white solid;
+  border-radius: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+}
+.btnEdit button:hover {
+  width: 150px;
+  height: 50px;
+  background: linear-gradient(0.25turn, #ffffff, #000000);
+  border: 2px rgb(255, 255, 255) solid;
+  border-radius: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+}

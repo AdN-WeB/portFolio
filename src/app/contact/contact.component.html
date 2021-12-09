@@ -39,7 +39,7 @@
         placeholder="@"
         required
       />
-      <span class="petitMsg"> Nous ne partagerons pas votre adresse email</span>
+      <span class="petitMsg"> Votre email sera visible par le destinataire uniquement</span>
       <div
         *ngIf="myForm.submitted && userForm.controls.userEmail.errors?.required"
       >
@@ -65,7 +65,7 @@
         placeholder="+33"
         required
       />
-      <span class="petitMsg">Ni votre numéro de téléphone</span>
+      <span class="petitMsg">Votre N° de téléphone sera visible par le destinataire uniquement </span>
       <div
         *ngIf="myForm.submitted && userForm.controls.userTel.errors?.required"
       >

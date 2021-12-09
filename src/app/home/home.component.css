@@ -30,3 +30,20 @@
   color: white;
   background-color: black;
 }
+#curriculum {
+  margin-left: 3rem;
+  width: 10rem;
+  height: 3rem;
+  background: linear-gradient(0.25turn, #000000, #ffffff);
+  border: 2px white solid;
+  border-radius: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+ #curriculum:hover {
+  background: linear-gradient(0.25turn, #ffffff, #000000);
+}
+.know a{
+  text-decoration:underline;
+}

@@ -1,6 +1,7 @@
 <div class="form">
   <form
     (ngSubmit)="myForm.valid && onSubmit() && clear()"
+    method="post"
     [formGroup]="userForm"
     #myForm="ngForm"
   >
@@ -108,7 +109,7 @@
       </div>
     </div>
     <div class="btnEdit">
-      <button type="submit">Envoyer</button>
+      <button [disabled]="isLoading" type="submit">Envoyer</button>
       <button type="reset" (click)='clear()'>Effacer</button>
       <button type="button" (click)="redirected()">Retour</button>
     </div>

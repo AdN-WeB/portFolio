@@ -1,6 +1,6 @@
 <div class="form">
   <form
-    (ngSubmit)="myForm.valid && onSubmit() && clear()"
+    (ngSubmit)="onSubmit()"
     method="post"
     [formGroup]="userForm"
     #myForm="ngForm"
@@ -108,6 +108,9 @@
         <p class="danger">Pas de message, pas de reponse</p>
       </div>
     </div>
+    <input [formControl]="honneyPot" id="honneyPot" type="text" />
+    <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+      <span>{{responseMessage}}</span> </div>
     <div class="btnEdit">
       <button [disabled]="isLoading" type="submit">Envoyer</button>
       <button type="reset" (click)='clear()'>Effacer</button>

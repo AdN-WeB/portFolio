@@ -13,7 +13,8 @@ export class ContactComponent implements OnInit {
   honneyPot: FormControl = new FormControl('');
   submitted: boolean = false;
   isLoading: boolean = false;
-  responseMessage: string | undefined;
+  responseMessage: string | undefined; 
+  
 
   constructor(
     private fb: FormBuilder,
@@ -48,42 +49,41 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.userForm.valid && this.honneyPot.value == '') {
-      // this.userForm.disable();
+    if (this.userForm.status == "VALID" && this.honneyPot.value == '') {
+      this.userForm.disable();
+      this.isLoading = true;
+      this.submitted = false;
+     
       const formData: any = new FormData();
       formData.append('userName', this.userForm.get('userName').value);
       formData.append('userEmail', this.userForm.get('userEmail').value);
       formData.append('userTel', this.userForm.get('userTel').value);
       formData.append('userMsg', this.userForm.get('userMsg').value);
-      this.isLoading = true;
-      this.submitted = false;
+      
       this.http
-        .post(
-          'https://script.google.com/macros/s/AKfycbypOHAyNos1VtdhhavklswS9w0XbzRyEQfNA1q2G77BdjKgSR4/exec',
-          formData
-        ).subscribe(
-          (response) => {
-            if (response == 'success') {
-              this.responseMessage = 'Votre message a bien été transmit';
-            } else {
-              this.responseMessage =
-                'Oops! un problème est survenue.. Rafraîchissez la page et réessayez';
-            }
-            this.userForm.enable();
-            this.submitted = true;
-            this.isLoading = false;
-            console.log(response);
-          },
-          (error) => {
-            this.responseMessage =
-              'Oops! un problème est survenue.. Rafraîchissez la page et réessayez';
-            this.userForm.enable();
-            this.submitted = true;
-            this.isLoading = false;
-            console.log(error);
+      .post(
+        'https://script.google.com/macros/s/AKfycbypOHAyNos1VtdhhavklswS9w0XbzRyEQfNA1q2G77BdjKgSR4/exec',
+        formData
+      ).subscribe(
+        (response:any) => {
+          if (response.result == 'success') {
+            this.responseMessage = "Votre message a bien été transmit";  
+          } else {
+            this.responseMessage = "Oops!! Un problème est survenu, rafraichissez et réessayez";
           }
-        );
-      this.router.navigate(['/home']);
+          this.userForm.enable();
+          this.submitted = true;
+          this.isLoading = false;
+          console.log(response);
+        },
+        (error) => {
+          this.responseMessage = "Oops!! Un problème est survenu, rafraichissez et réessayez"
+          this.userForm.enable();
+          this.submitted = true;
+          this.isLoading = false;
+          console.log(error);
+        }
+      );
     }
   }
 

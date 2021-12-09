@@ -4,10 +4,10 @@
     color: white;
     border: 1px solid white ;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    height:9rem ;
+    height:9rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 0.5rem;
   }

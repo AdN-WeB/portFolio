@@ -20,12 +20,12 @@
       <div
         *ngIf="myForm.submitted && userForm.controls.userName.errors?.required"
       >
-        <p class="danger">Merci de renseigner votre nom</p>
+        <p class="danger">Merci de renseigner votre nom.</p>
       </div>
       <div
         *ngIf="myForm.submitted && userForm.controls.userName.errors?.minLength"
       >
-        <p class="danger">3 charactères minimum</p>
+        <p class="danger">3 charactères minimum.</p>
       </div>
     </div>
     <div class="form-group">
@@ -39,20 +39,20 @@
         placeholder="@"
         required
       />
-      <span class="petitMsg"> Votre email sera visible par le destinataire uniquement</span>
+      <span class="petitMsg"> Votre email sera visible par le destinataire uniquement.</span>
       <div
         *ngIf="myForm.submitted && userForm.controls.userEmail.errors?.required"
       >
-        <p class="danger">Merci de renseigner votre email</p>
+        <p class="danger">Merci de renseigner votre email.</p>
       </div>
     </div>
     <div *ngIf="myForm.submitted && userForm.controls.userEmail.errors?.email">
-      <p class="danger">Le format de l'adresse email n'est pas valide</p>
+      <p class="danger">Le format de l'adresse email n'est pas valide.</p>
     </div>
     <div
       *ngIf="myForm.submitted && userForm.controls.userEmail.errors?.minlength"
     >
-      <p class="danger">3 charactères minimum</p>
+      <p class="danger">3 charactères minimum.</p>
     </div>
     <div class="form-group">
       <label for="userTel"></label>
@@ -65,17 +65,17 @@
         placeholder="+33"
         required
       />
-      <span class="petitMsg">Votre N° de téléphone sera visible par le destinataire uniquement </span>
+      <span class="petitMsg">Votre N° de téléphone sera visible par le destinataire uniquement. </span>
       <div
         *ngIf="myForm.submitted && userForm.controls.userTel.errors?.required"
       >
-        <p class="danger">Merci de renseigner votre numero de téléphone</p>
+        <p class="danger">Merci de renseigner votre numero de téléphone.</p>
       </div>
       <div
         *ngIf="myForm.submitted && userForm.controls.userTel.errors?.pattern"
       >
         <p class="danger">
-          Le format n'est pas valide ex: 0600000000 or +336000000000
+          Le format n'est pas valide ex: 0600000000 ou +336000000000.
         </p>
       </div>
     </div>
@@ -95,17 +95,17 @@
       <div
         *ngIf="myForm.submitted && userForm.controls.userMsg.errors?.maxlength"
       >
-        <p class="danger">400 charactères maximum</p>
+        <p class="danger">400 charactères maximum.</p>
       </div>
       <div
         *ngIf="myForm.submitted && userForm.controls.userMsg.errors?.minlength"
       >
-        <p class="danger">5 charactères minimum</p>
+        <p class="danger">5 charactères minimum.</p>
       </div>
       <div
         *ngIf="myForm.submitted && userForm.controls.userMsg.errors?.required"
       >
-        <p class="danger">Pas de message, pas de reponse</p>
+        <p class="danger">Pas de message, pas de reponse.</p>
       </div>
     </div>
     <input [formControl]="honneyPot" id="honneyPot" type="text" />

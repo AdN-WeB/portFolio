@@ -1,74 +1,148 @@
-.danger {
-  color: red;
-  display: flex;
-  text-align: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-}
-.petitMsg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-}
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid white;
-
-}
-input {
-  width: 700px;
-  height: 30px;
-  margin: 20px;
+@media (max-width: 767px){
+  .danger {
+    color: red;
+    display: flex;
+    text-align: center;
+    font-size: 0.7rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .petitMsg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 0.7rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
   
+  }
+  input {
+    width: 17rem;
+    height: 30px;
+    margin: 20px;
+    
+  }
+  textarea {
+    width: 17rem;
+    margin: 1.2rem;
+   
+  }
+  .btnEdit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  .btnEdit button {
+    width: 5rem;
+    height: 2rem;
+    background: linear-gradient(0.25turn, #000000, #ffffff);
+    border: 2px white solid;
+    border-radius: 5px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size:  1rem;
+    cursor: pointer;
+  }
+  .btnEdit button:hover {
+    background: linear-gradient(0.25turn, #ffffff, #000000);
+  }
+  #honneyPot{
+    display: none;
+  }
+  .hidden {
+    display: none
+  }
+  .visible {
+    display: flex
+  }
+  .center-text {
+    text-align: center;
+    color: red;
+  }
 }
-textarea {
-  width: 700px;
-  margin: 20px;
- 
-}
-.btnEdit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-}
-.btnEdit button {
-  width: 150px;
-  height: 50px;
-  background: linear-gradient(0.25turn, #000000, #ffffff);
-  border: 2px white solid;
-  border-radius: 5px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 25px;
-  cursor: pointer;
-}
-.btnEdit button:hover {
-  width: 150px;
-  height: 50px;
-  background: linear-gradient(0.25turn, #ffffff, #000000);
-  border: 2px rgb(255, 255, 255) solid;
-  border-radius: 5px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 25px;
-  cursor: pointer;
-}
-#honneyPot{
-  display: none;
-}
-.hidden {
-	display: none
-}
-.visible {
-	display: flex
-}
-.center-text {
-	text-align: center;
-  color: red;
+@media (min-width: 768px) {
+  .danger {
+    color: red;
+    display: flex;
+    text-align: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .petitMsg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+  
+  }
+  input {
+    width: 700px;
+    height: 30px;
+    margin: 20px;
+    
+  }
+  textarea {
+    width: 700px;
+    margin: 20px;
+   
+  }
+  .btnEdit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  .btnEdit button {
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(0.25turn, #000000, #ffffff);
+    border: 2px white solid;
+    border-radius: 5px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .btnEdit button:hover {
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(0.25turn, #ffffff, #000000);
+    border: 2px rgb(255, 255, 255) solid;
+    border-radius: 5px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  #honneyPot{
+    display: none;
+  }
+  .hidden {
+    display: none
+  }
+  .visible {
+    display: flex
+  }
+  .center-text {
+    text-align: center;
+    color: red;
+  }
 }

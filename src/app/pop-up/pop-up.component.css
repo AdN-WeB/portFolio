@@ -16,6 +16,7 @@
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
+    cursor: pointer;
 
   } 
   h1{
@@ -89,6 +90,7 @@
     color: rgb(255, 0, 0);
     font-size: 30px;
     padding-left: 10px;
+    cursor: pointer;
   } 
   h1{
     color : white ;

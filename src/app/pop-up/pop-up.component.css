@@ -1,3 +1,77 @@
+@media (max-width: 767px){
+
+  .mainContainer {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 0.6rem;
+    text-decoration: none;
+  
+  }
+  .whoIam{
+    display: flex;
+    text-decoration: none;
+  }
+  .whoIam a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+
+  } 
+  h1{
+    color : white ;
+    font-size: 1.1rem;
+
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.4s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    margin: 4rem ;
+    background: rgb(0, 0, 0);
+    opacity: 95%;
+    border-radius: 5px;
+    position: relative;
+    transform: all 0.4s ease-in-out;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: white 2px solid;
+
+  }
+  .popup .cross {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: red;
+  }
+  .popup .cross:hover {
+    color: rgb(255, 255, 255);
+  }
+
+}
+
+@media (min-width:768px){
 .mainContainer {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 20px;
@@ -65,3 +139,4 @@
   .popup .cross:hover {
     color: rgb(255, 255, 255);
   }
+}

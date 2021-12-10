@@ -74,16 +74,15 @@ export class ContactComponent implements OnInit {
           this.userForm.enable();
           this.submitted = true;
           this.isLoading = false;
-          console.log(response);
         },
         (error) => {
           this.responseMessage = "Oops!! Un problème est survenu, rafraichissez et réessayez"
           this.userForm.enable();
           this.submitted = true;
           this.isLoading = false;
-          console.log(error);
         }
       );
+ 
     }
   }
 

@@ -67,7 +67,7 @@
   }
   .center-text {
     text-align: center;
-    color: red;
+    color: rgb(81, 255, 0);
   }
 }
 @media (min-width: 768px) {
@@ -143,6 +143,6 @@
   }
   .center-text {
     text-align: center;
-    color: red;
+    color: rgb(81, 255, 0);
   }
 }

@@ -109,7 +109,7 @@
       </div>
     </div>
     <input [formControl]="honneyPot" id="honneyPot" type="text" />
-    <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+    <div [ngClass]="!submitted? 'danger' : 'center-text'">
       <span>{{responseMessage}}</span> </div>
     <div class="btnEdit">
       <button [disabled]="isLoading" type="submit">Envoyer</button>

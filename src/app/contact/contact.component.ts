@@ -78,7 +78,7 @@ export class ContactComponent implements OnInit {
         (error) => {
           this.responseMessage = "Oops!! Un problème est survenu, rafraichissez et réessayez"
           this.userForm.enable();
-          this.submitted = true;
+          this.submitted = false;
           this.isLoading = false;
         }
       );

@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LegalMentionComponent } from './legal-mention/legal-mention.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     ContactComponent,
+    LegalMentionComponent,
     ],
   imports: [
     BrowserModule,
